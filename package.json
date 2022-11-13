@@ -1,0 +1,26 @@
+{
+  "name": "supremacy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.18.0",
+    "npm": "8.19.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hndsm1917/Supremacy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.comn/Hndsm1917/Supremacy/issues"
+  },
+  "homepage": "https://github.com/Hndsm1917/Supremacy#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
