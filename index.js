@@ -1,23 +1,17 @@
-const express = require('express');
+import express from 'express';
+import passport from 'passport';
+import GoogleStrategy from 'passport-google-oauth20';
+import keys from "./config/keys";
+
 const app = express();
-const PORT = process.env.PORT || 4000;
+passport.use('', new GoogleStrategy({
+  clientID: keys.googleClientID,
+  clientSecretID: keys.googleClientSecretID,
+  callbackUrl: '/auth/google/callback',
+}, (accessToken) => {
+  console.log(accessToken);
+}))
 
-let data = JSON.stringify({
-  data: [{
-      name: "test1"
-    },
-    {
-      name: "test2"
-    },
-  ]
-})
-
-app.get('/', (req, res) => {
-  res.send('test');
-})
-
-app.get('/api/names', (req, res) => {
-  res.send(data)
-})
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT);
