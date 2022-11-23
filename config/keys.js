@@ -1,4 +1,4 @@
-export default {
-    googleClientID: '245775875922-qbv7bgnrnr3jrlvctogf4ogadth9qeft.apps.googleusercontent.com',
-    googleClientSecretID: '',
-};
+module.exports = {
+  googleClientID: '1030563177064-tnilv0t8bh9cvhk6i6vlobhff2h0mn2i.apps.googleusercontent.com',
+  googleClientSecretID: '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',
+}

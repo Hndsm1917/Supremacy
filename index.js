@@ -1,17 +1,11 @@
-import express from 'express';
-import passport from 'passport';
-import GoogleStrategy from 'passport-google-oauth20';
-import keys from "./config/keys";
+require('module-alias/register');
+require('@/services/passport');
+const express = require('express');
+const authRoutes = require('@/routes/authRoutes');
 
 const app = express();
-passport.use('', new GoogleStrategy({
-  clientID: keys.googleClientID,
-  clientSecretID: keys.googleClientSecretID,
-  callbackUrl: '/auth/google/callback',
-}, (accessToken) => {
-  console.log(accessToken);
-}))
-
 const PORT = process.env.PORT || 5000;
+
+authRoutes(app);
 
 app.listen(PORT);
